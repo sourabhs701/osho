@@ -1,4 +1,4 @@
-const baseUrl = "https://cdn.srb.codes/";
+const baseUrl = "https://dropinme.s3.ap-south-1.amazonaws.com/";
 
 export const audioList = [
   {
