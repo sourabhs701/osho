@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function TextDisplay({ textUrl }) {
+export default function TextDisplay({ textUrl, fontSize = 14 }) {
     const [text, setText] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -59,7 +59,10 @@ export default function TextDisplay({ textUrl }) {
             )}
 
             {text && !loading && (
-                <div className="text-sm leading-relaxed whitespace-pre-wrap break-words overflow-y-auto md:px-8 rounded-lg text-justify">
+                <div
+                    className="leading-relaxed whitespace-pre-wrap break-words overflow-y-auto rounded-lg text-justify"
+                    style={{ fontSize: `${fontSize}px` }}
+                >
                     {text}
                 </div>
             )}
