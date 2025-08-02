@@ -4,7 +4,7 @@ import { audioList } from "@/data/audioData";
 
 export default function TrackList({ currentTrack, isPlaying, onTrackSelect, }) {
     return (
-        <div className="w-full max-w-2xl mx-auto space-y-3">
+        <div className="w-full  mx-auto space-y-3 pb-30 ">
             {audioList.map((track) => (
                 <Card
                     key={track.id}
@@ -17,10 +17,10 @@ export default function TrackList({ currentTrack, isPlaying, onTrackSelect, }) {
                     <CardContent className="flex items-center gap-4">
 
                         {/* Track Info */}
-                            <img
-                                src={track.image}
-                                className="w-24 h-24 rounded-2xl object-cover shadow-lg"
-                            />
+                        <img
+                            src={track.image}
+                            className="w-24 h-24 rounded-2xl object-cover shadow-lg"
+                        />
                         <div className="flex-1 min-w-0">
                             <h3 className="font-semibold text-gray-900 dark:text-white truncate">
                                 {track.title}
